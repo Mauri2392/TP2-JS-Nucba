@@ -26,16 +26,16 @@
 /* header */ 
 
 header {
-  background: var(--azulboton);
+  background: var(--dark-blue);
+  display: flex; /* alinea todo */
+  justify-content: space-between; /* distibuye el espacio al rededor de los items*/
+  align-items: center; /* alinea los elementos  */
+  height: 70px; /* altura del header*/
+  padding: 0px 30px 0px 0px; /* espacio o separacion, en este caso el lado del carrito */
+  position: fixed; /* deja el navbar quieto en todo momento y tmb se achica y ocupa el tamaño del contenido, ponerle abajo width 100% */ 
   width: 100%;
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  height: 70px; 
-  padding: 0px 30px 0px 0px;
-  position: fixed; /* deja el navbar quieto en todo momento*/ 
-  top: 0;
-  z-index: 2;
+  top: 0; /**/
+  z-index: 2; /**/
 } 
 
 .logo {
@@ -57,19 +57,30 @@ header {
   gap: 20px; /* espacio entre navbarlist */
 } 
 .navbar-list a {
+  color: var(--white); /* color de la letra */ 
+  font-size: 15px; /* tamaño de la letra */
+} 
+
+/* .navbar-list li:first-child > a {
   color: var(--white);
-  font-size: 15px;
+  font-weight: 600;
+} */ 
+
+.navbar-list .active {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.cart-icon { 
+  font-weight: 300; /* espesor de donde se lo aplique*/
+  border-radius: 5px; /* borde redondo*/
+  height: 40px; 
+  padding: 5px 10px; /* espacio arriba y abajo 1ero 5px, espacio izq y der 20px*/
+  cursor: pointer; 
+  /* background-color: var(--white); */
 } 
 
-.cart-icon {
-  font-weight: 300;
-  border-radius: 5px;
-  height: 40px;
-  padding: 5px 20px; 
-  cursor: pointer;
-} 
-
-.btn-signin, .btn-signup {
+.btn-signin, .btn-signup {/**/
   margin: 0px;
   border: none;
   border-radius: 5px;
@@ -88,68 +99,65 @@ header {
  /* background-color: #007bff;*/ 
 }
 
-main {
-  background: var(--celeste);
+main {/*El main va a servir de contenedor principal de todas las secciones y ademas para darle un fondo
+  a las secciones que van a estar limitadas a 1200px maximo y centrarlas en la página para resoluciones grandes.*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
   width: 100%;
+  background: var(--dark-blue);
 } 
 
 /* ********************************** */ 
 
 /* hero section */ 
 
-#hero {
-  margin-top: 50px;
-  padding: 70px 0;
+#hero {/**/
+  margin-top: 50px; /* distancia entre el header y la section hero */
+  padding: 70px 0; /* padding arriba y abajo para que no se pegue tanto al borde */
   max-width: 1200px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: var(--celeste);
+  align-items: center; 
 }
 
-.hero-info {
+.hero-info {/**/
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   width: 50%;
 }
 
-.hero-info h1 {
-  font-size: 48px;
+.hero-info h1 {/**/
+  font-size: 50px;
   width: 80%;
   min-width: 500px; /*Para que nunca ocupe menos que esto en desktop*/
   font-weight: 800;
   color: var(--text-white);
 }
 
-.hero-info p {
-  font-size: 14px;
-  width: 70%;
+.hero-info p {/**/
+  font-size: 20px;
+  width: 80%;
   color: var(--text-gray);
 }
 
-.hero-info p > span {
-  font-weight: 800;
-} 
-
-.hero-info a {
+.hero-info a {/**/
   color: var(--text-white);
   background-color: var(--azulboton);
   width: 120px;
   padding: 8px 0px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
 }
 
-.hero-card {
+.hero-card {/**/
   width: 300px;
-  background: var(--secondary);
+  background: var(--azulboton);
+  border-radius: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -159,16 +167,87 @@ main {
 
 .hero-card img {
   border-radius: 20px;
+} 
+
+
+.hero-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.hero-card-top h3 {
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hero-card-top span {
+  background-color: var(--primary);
+  text-align: center;
+  width: 50px;
+  padding: 3px 0px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.hero-card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-card-creator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hero-card-creator img {
+  height: 40px;
+  width: 40px;
+}
+
+.creator-info p:first-child,
+.hero-card-price p {
+  color: var(--text-gray);
+  font-size: 12px;
+  font-weight: 300px;
+}
+
+.hero-card-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-card-price span,
+.creator-info p:last-child {
+  font-size: 14px;
+}
+
+.hero-card-price span {
+  font-weight: 700;
 }
 
 /* ********************************** */ 
 
 /* discover section */ 
 
-#discover {
+#discover {/**/
   padding: 70px 0; 
   max-width: 1200px;
-  background: var(--celeste);
+  background: var(--dark-blue);
+  /* height: 100%; */
 } 
 
 .discover-info {
@@ -180,30 +259,30 @@ main {
 
 #discover h2 { 
   font-size: 32px;
-  width: 45%;
+  width: 40%;
   font-weight: 800;
 } 
 
-.discover-text {
+.discover-text {/**/
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 40%;
   gap: 20px;
 } 
 
 .discover-text p {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   color: var(--text-gray);
 } 
 
-.discover-text a {
+.discover-text a {/**/
   color: var(--white);
   font-weight: 600;
   text-decoration: underline;
 }
 
-.discover-cards {
+.discover-cards {/**/
   display: flex;
   gap: 15px;
   justify-content: center;
@@ -217,7 +296,7 @@ main {
 
 /* ********************************** */ 
 
-#Products {
+#Products {/**/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,7 +304,7 @@ main {
   padding: 40px 0;
   max-width: 1200px;
   width: 100%;
-  background-color: var(--celeste);
+  background-color: var(--dark-blue);
 } 
 
 #Products h2 {
@@ -243,7 +322,7 @@ main {
   margin-bottom: 20px;
 } 
 
-.categoria {
+.categoria {/**/
   background: blue;
   border: none;
   padding: 10px 15px;
@@ -256,7 +335,7 @@ main {
   background: gray;
 } 
 
-.productos-container {
+.productos-container {/**/
 display: flex;
 flex-wrap: wrap;
 align-items: center;
@@ -291,7 +370,7 @@ max-width: 1200px;
   align-items: center;
 }
 
-.product-top h3 {
+.product-top h3 {/**/
   color: black; 
   font-size: 20px;
   margin-bottom: 5px;
@@ -320,8 +399,8 @@ max-width: 1200px;
   max-width: 1200px;
 } */ 
 
-#Contact {
-    background-color: var(--celeste);
+#Contact {/**/
+    background: var(--dark-blue);
     padding: 40px; 
     max-width: 1200px;
 } 
@@ -399,15 +478,15 @@ max-width: 1200px;
 
 /* ********************************** */ 
 
-footer {
-    background: var(--azulboton);
+footer {/**/
+    background: var(--dark-blue);
     color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    padding: 60px 0;
+    gap: 20px;
+    padding: 20px 0;
   }
   
   footer a,

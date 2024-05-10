@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     /* background-color: #f4f4f4; */
     /* background-image: url(./Assets/img/logo/logo.jpeg);*/
-    background-color: #45a049;
+    background-color: #051d3b;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -58,7 +58,7 @@ body {
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #051d3b;
   } 
 
   .volver-btn {

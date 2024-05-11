@@ -295,7 +295,7 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
 
 /* ********************************** */ 
 
-#Products {/**/
+#products {/**/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -306,10 +306,10 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
   background-color: var(--dark-blue);
 } 
 
-#Products h2 {
+#products h2 {
   font-size: 32px;
   font-weight: 800;
-  margin-bottom: 40px;
+  margin-bottom: 40px; 
   color: var(--white);
 } 
 
@@ -334,7 +334,7 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
   background: gray;
 } 
 
-.productos-container {/**/
+.products-container {/**/
 display: flex;
 flex-wrap: wrap;
 align-items: center;
@@ -357,32 +357,47 @@ max-width: 1200px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   border-radius: 30px;
   gap: 10px;
 } 
 
-.product-top {
+.product-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%; /* abarca el 100% del contenedor */
+  gap: 5px;
+}
+
+.product-top {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  /* gap: 70px; */
 }
 
 .product-top h3 {/**/
-  color: black; 
-  font-size: 20px;
+  color: var(--white); 
+  font-size: 16px;
   margin-bottom: 5px;
 } 
 
 .product-top p {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 800; 
   margin-bottom: 10px;
 }
 
+.product-bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .btn-add {
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
   border: none;
   background: blue;

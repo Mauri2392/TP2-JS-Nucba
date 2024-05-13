@@ -23,10 +23,33 @@
                 <li><a href="#discover">Descubre</a></li>
                 <li><a href="#products">Productos</a></li> 
                 <li><a href="#Contact">Contacto</a></li>
-                <li><a href="form1.html" class="btn-signin">Sign In</a></li>
-                <li><a href="form2.html" class="btn-signup">Sign Up</a></li>
+                <li><a href="form1.html" class="btn-signin">SignIn</a></li>
+                <li><a href="form2.html" class="btn-signup">SignUp</a></li>
             </ul>
-            <img src="Assets/img/crt icon.svg" alt="Carrito de compras" class="cart-icon" /> 
+
+            <!-- /*Agregamos input y label para el carrito*/ -->
+            <label for="cart-toggle" class="cart-label">
+              <img src="Assets/img/crt icon.svg" alt="Carrito de compras" class="cart-icon" /> 
+            </label>
+            <input type="checkbox" id="cart-toggle">
+            <!-- Agregamos el carrito -->
+            <div class="cart">
+              <h2>Tus compras</h2>
+
+              <div class="cart-item">
+                <img src="./Assets/img/esqueleto/esqueleto craneo.jpeg" alt="esqueleto">
+                <div class="item-info">
+                  <h3 class="item-title">Craneo</h3>
+                  <span class="item-price">$2.000</span>
+                </div>
+                <div class="item-handler">
+                  <span class="quantity-handler down">-</span>
+                  <span class="item-quantity">1</span>
+                  <span class="quantity-handler up">+</span>
+                </div>
+              </div>
+
+            </div>
         </nav>
     </header> 
 
@@ -201,6 +224,7 @@
                 </div>
               </div>
             </div>
+            <button class="btn-load">Ver Más</button>
         </section>
           
         <section id="Contact">
@@ -249,14 +273,14 @@
             <li><a href="#">Contacto</a></li>
           </ul>
         </div>
-        <div class="icons">
-          <a href="https://www.facebook.com/freecodecamp/">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/freecodecamp/" target="_blank">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://instagram.com/freecodecamp">
+          <a href="https://instagram.com/freecodecamp" target="_blank">
               <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/school/free-code-camp/">
+          <a href="https://www.linkedin.com/school/free-code-camp/" target="_blank">
               <i class="fab fa-linkedin-in"></i>
           </a>
         </div>

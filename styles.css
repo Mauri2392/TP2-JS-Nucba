@@ -26,7 +26,7 @@
 /* header */ 
 
 header {
-  background: var(--dark-blue);
+  background: linear-gradient(to bottom, #007bff, var(--dark-blue));
   display: flex; /* alinea todo */
   justify-content: space-between; /* distibuye el espacio al rededor de los items*/
   align-items: center; /* alinea los elementos  */
@@ -50,7 +50,7 @@ header {
 } 
 
 .navbar {
-  gap: 300px; /* espacio entre navbar y carrito */
+  gap: 150px; /* espacio entre navbar y carrito y checkbox */
 } 
 
 .navbar-list {
@@ -71,15 +71,6 @@ header {
   font-weight: 600;
 }
 
-.cart-icon { 
-  font-weight: 300; /* espesor de donde se lo aplique*/
-  border-radius: 5px; /* borde redondo*/
-  height: 40px; 
-  padding: 5px 10px; /* espacio arriba y abajo 1ero 5px, espacio izq y der 20px*/
-  cursor: pointer; 
-  /* background-color: var(--white); */
-} 
-
 .btn-signin, .btn-signup {/**/
   margin: 0px;
   border: none;
@@ -88,6 +79,7 @@ header {
   background-color: blue;
   color: var(--white);
   cursor: pointer; 
+  border: 1px solid var(--white);
 }
 
 .btn-signin:hover {
@@ -97,8 +89,54 @@ header {
 .btn-signup:hover { 
   color:var(--yellow);
  /* background-color: #007bff;*/ 
+} 
+
+/* MENU HAMBURGUESA Desktop */
+/* AGREGADO para mediaqueries */
+#menu-toggle,
+#cart-toggle,
+.menu-label {
+  display: none;
 }
 
+/*carrito*/
+
+.cart-icon { 
+  font-weight: 300; /* espesor de donde se lo aplique*/
+  border-radius: 5px; /* borde redondo*/
+  height: 40px; 
+  padding: 5px 10px; /* espacio arriba y abajo 1ero 5px, espacio izq y der 20px*/
+  cursor: pointer; 
+  /* background-color: var(--white); */ 
+} 
+
+.cart {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  padding: 50px 30px;
+  background: linear-gradient(to top, var(--azulboton), var(--dark-blue));
+  border-left: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+  z-index: 2;
+}
+
+.cart h2 {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cart-item img {
+  height: 50px;
+  width: 50px;
+}
+
+/* ********************************** */ 
 main {/*El main va a servir de contenedor principal de todas las secciones y ademas para darle un fondo
   a las secciones que van a estar limitadas a 1200px maximo y centrarlas en la página para resoluciones grandes.*/
   display: flex;
@@ -136,6 +174,10 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
   min-width: 500px; /*Para que nunca ocupe menos que esto en desktop*/
   font-weight: 800;
   color: var(--text-white);
+  background: linear-gradient(to top, #30cfd0, #c43ad6); /* css auto prefix */
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 .hero-info p {/**/
@@ -362,6 +404,10 @@ max-width: 1200px;
   gap: 10px;
 } 
 
+.product:hover {
+  transform: scale(1.03);
+}
+
 .product-info {
   display: flex;
   flex-direction: column;
@@ -405,6 +451,19 @@ max-width: 1200px;
   border-radius: 10px;
   padding: 10px 25px;;
 } 
+
+.btn-load {
+  background: #007bff;
+  border: 1px solid var(--white);
+  padding: 10px 35px;
+  color: var(--white);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-load:hover {
+  background: blue;
+}
 
 /* ********************************** */  
 
@@ -493,7 +552,7 @@ max-width: 1200px;
 /* ********************************** */ 
 
 footer {/**/
-    background: var(--dark-blue);
+    background: linear-gradient(to top, #007bff, var(--dark-blue));
     color: var(--white);
     display: flex;
     flex-direction: column;
@@ -520,9 +579,31 @@ footer {/**/
     gap: 20px;
   } 
 
-  .icons { 
+  /* .social-icons { 
     display: flex;
     justify-content: center;
     gap: 50px;
+  } */
+
+  /* .social-icons {
+    text-align: center;
+  } */
+
+  .social-icons a {
+    font-size: 28px;
+    color: var(--white);
+    border: 2px solid var(--azulboton);
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 10px;
+    transition: 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.1)translateY(-5px);
+    color: var(--white);
   }
   

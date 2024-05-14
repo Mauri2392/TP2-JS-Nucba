@@ -216,7 +216,10 @@ header {
   font-size: 16px;
 }
 
-
+/*Toggle del carro*/
+#cart-toggle:checked + .cart {
+  display: flex;
+}
 
 
 /* ********************************** */ 
@@ -244,7 +247,7 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
   align-items: center; 
 }
 
-.hero-info {/**/
+.hero-info {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -252,7 +255,7 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
 }
 
 .hero-info h1 {/**/
-  font-size: 50px;
+  font-size: 35px;
   width: 80%;
   min-width: 500px; /*Para que nunca ocupe menos que esto en desktop*/
   font-weight: 800;
@@ -277,6 +280,7 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
   border-radius: 10px;
   font-size: 16px;
   text-align: center;
+  border: 1px solid var(--white);
 }
 
 .hero-card {/**/
@@ -414,7 +418,7 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
 } 
 
 .discover-cards img {
-  width: 25%;
+  width: 30%;
   border-radius: 20px;
 }
 
@@ -438,7 +442,7 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
   color: var(--white);
 } 
 
-.categorias {
+.categories {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -456,7 +460,7 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
 } 
 
 .activa {
-  background: gray;
+  background: var(--azulboton);
 } 
 
 .products-container {/**/
@@ -531,7 +535,7 @@ max-width: 1200px;
   border: none;
   background: blue;
   color: var(--white); 
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px 25px;;
 } 
 
@@ -540,7 +544,7 @@ max-width: 1200px;
   border: 1px solid var(--white);
   padding: 10px 35px;
   color: var(--white);
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -673,16 +677,18 @@ footer {/**/
   } */
 
   .social-icons a {
-    font-size: 28px;
+    font-size: 20px;
     color: var(--white);
     border: 2px solid var(--azulboton);
-    width: 42px;
-    height: 42px;
+    width: 30px;
+    height: 30px;
     display: inline-block;
+    justify-content: center;
     text-align: center;
     border-radius: 10px;
     margin: 0 10px;
     transition: 0.3s ease;
+    padding: 1px;
   }
 
   .social-icons a:hover {

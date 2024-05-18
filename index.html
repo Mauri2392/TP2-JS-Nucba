@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"> 
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="animaciones.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -35,9 +36,12 @@
 
             <!-- /*Agregamos input y label para el carrito*/ -->
             <label for="cart-toggle" class="cart-label">
-              <img src="Assets/img/crt icon.svg" alt="Carrito de compras" class="cart-icon" /> 
-            </label>
+                <img src="Assets/img/crt icon.svg" alt="Carrito de compras" class="cart-icon" /> 
+            </label> 
+
+            <!--  <i class="fa-light fa-cart-shopping"></i> -->
             <input type="checkbox" id="cart-toggle">
+
             <!-- Agregamos el carrito -->
             <div class="cart">
               <h2>Tus compras</h2>
@@ -76,6 +80,9 @@
               </div>
               <button class="btn-add">Comprar</button>
             </div>
+          </div>
+          <!-- AGREGAMOS UN DIV VACIO DE CLASE OVERLAY PARA EFECTO GLASS AL ABRIR MENU HAMBURGUESA Y CARRITO -->
+          <div class="overlay"></div>
         </nav>
     </header> 
 

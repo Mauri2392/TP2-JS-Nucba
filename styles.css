@@ -43,6 +43,10 @@ header {
   cursor: pointer; 
 }
 
+.logo:hover {
+  transform: scale(1.01);
+} 
+
 .navbar, .navbar-list {
   display: flex; 
   align-items: center; 
@@ -489,10 +493,14 @@ max-width: 1200px;
   padding: 20px;
   border-radius: 30px;
   gap: 10px;
+  box-shadow: 0 0 5px var(--azulboton);
+  transition: 0.4s ease; 
 } 
 
 .product:hover {
-  transform: scale(1.03);
+  box-shadow: 0 0 10px var(--azulboton),
+              0 0 20px var(--azulboton);
+  transform: scale(1.02);
 }
 
 .product-info {
@@ -677,22 +685,28 @@ footer {/**/
   } */
 
   .social-icons a {
-    font-size: 20px;
+    font-size: 23px;
+    /* font-size: 20px;*/
     color: var(--white);
     border: 2px solid var(--azulboton);
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    /*width: 30px;
+    height: 30px; */
     display: inline-block;
     justify-content: center;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 50%;
+    /* border-radius: 10px; */
     margin: 0 10px;
     transition: 0.3s ease;
-    padding: 1px;
+    padding: 2px;
   }
 
   .social-icons a:hover {
     transform: scale(1.1)translateY(-5px);
-    color: var(--white);
+    color: var(--azulboton);
+    border: 2px solid var(--azulboton);
+    background: var(--white);
   }
   

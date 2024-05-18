@@ -1,0 +1,91 @@
+/* Agregamos el scroll behavior smooth para que sea mas suave la navegacion */
+/* scroll padding top para cuando apreta en el link tambien tome en cuenta la altura del navbar
+ y no nos tape parte de la seccion*/
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+}
+
+/*Header*/
+  /*Para efecto de glassmorphismo cuando abrimos menú hamburguesa y carrito*/
+  
+  /*GLASMORPHISM:
+  Básicamente, el concepto principal de esta tendencia es poner un fondo semitransparente que
+  añade un difuminado al fondo del div en el que se aplique. En este caso, lo usamos para que al abrir el menú
+  hamburguesa y el carrito lo demás de la página se vea borroso abajo de este div de clase overlay.
+  */ 
+
+.overlay {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1; /*Para que quede por encima del resto de las cosas*/
+  
+    /*Efecto de Glassmorphismo*/
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: none;
+} 
+
+ /*Toggle para el overlay (para que funcione unicamente cuando abrimos carrito o menu hamburguesa.
+  Aclarar que funciona porque son elementos hermanos y overlay esta debajo de los dos inputs en el código.*/
+#cart-toggle:checked ~ .overlay {
+    display: block;
+}
+  
+#menu-toggle:checked ~ .overlay {
+    display: block;
+} 
+
+/*Hover de los elementos "a" del navbar*/
+/* .navbar-list li {
+    position: relative;
+    padding: 0;
+} 
+
+.navbar-list li a::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: var(--text-white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.15s ease;
+} 
+
+.navbar-list li a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+} */ 
+
+/*CARRITO */
+  /*Despues de cambiar el carrito en el html y en styles.css , aplicamos una animación en hover*/
+/*   .cart-icon {
+    transition: all 0.2s ease-out;
+  }
+  
+  .cart-icon:hover {
+    color: var(--#);
+    border-color: var(--);
+    transition: all 0.2s ease-in;
+  } */ 
+
+/*Botones del carrito*/
+.quantity-handler {
+    transition: all 0.2s ease-in;
+}
+  
+.quantity-handler:hover {
+    cursor: pointer;
+    background-color: #007bff;
+    transition: all 0.2s ease-in;
+} 
+

@@ -284,7 +284,18 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
   border-radius: 10px;
   font-size: 16px;
   text-align: center;
-  border: 1px solid var(--white);
+  /*border: 1px solid var(--white);*/
+  box-shadow: 0 0 5px var(--azulboton);
+  transition: 0.4s ease; 
+}
+
+.hero-info a:hover {
+  box-shadow: 0 0 5px var(--azulboton),
+              0 0 10px var(--azulboton);
+  transform: scale(1.02);
+  color: #007bff;
+  background-color: #fafafa;
+  font-weight: 500;
 }
 
 .hero-card {/**/
@@ -296,7 +307,15 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  box-shadow: 0 0 5px var(--azulboton);
+  transition: 0.4s ease; 
 } 
+
+.hero-card:hover {
+  box-shadow: 0 0 10px var(--azulboton),
+              0 0 20px var(--azulboton);
+  transform: scale(1.02);
+}
 
 .hero-card img {
   border-radius: 20px;
@@ -544,20 +563,35 @@ max-width: 1200px;
   background: blue;
   color: var(--white); 
   border-radius: 5px;
-  padding: 10px 25px;;
+  padding: 10px 25px;
+  box-shadow: 0 0 5px blue;
+  transition: 0.4s ease;
 } 
+
+.btn-add:hover {
+  box-shadow: 0 0 5px blue,
+              0 0 10px blue;
+  transform: scale(1.02);
+  color: #007bff;
+  background-color: #fafafa;
+}
 
 .btn-load {
   background: #007bff;
-  border: 1px solid var(--white);
   padding: 10px 35px;
   color: var(--white);
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 0 5px var(--azulboton);
+  transition: 0.4s ease;
 }
 
 .btn-load:hover {
-  background: blue;
+  box-shadow: 0 0 5px var(--azulboton),
+              0 0 10px var(--azulboton);
+  transform: scale(1.02);
+  color: #007bff;
+  background-color: #fafafa;
 }
 
 /* ********************************** */  
@@ -642,7 +676,18 @@ max-width: 1200px;
     margin-top: 10px;
     cursor: pointer;
     color: var(--white);
+    box-shadow: 0 0 5px var(--azulboton);
+    transition: 0.4s ease;
 } 
+
+.contact__formCtnr-form form button:hover {
+    box-shadow: 0 0 5px var(--azulboton),
+                0 0 10px var(--azulboton);
+    transform: scale(1.02);
+    color: #007bff;
+    background-color: #fafafa;
+}
+
 
 /* ********************************** */ 
 

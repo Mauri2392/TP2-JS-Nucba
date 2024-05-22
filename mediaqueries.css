@@ -20,8 +20,8 @@
     align-items: flex-start;
     padding: 45px 30px;
     gap: 25px;
-    z-index: 2;
-    display: none;
+    z-index: 2; 
+    display: none; 
   }
 
 .navbar-list a {

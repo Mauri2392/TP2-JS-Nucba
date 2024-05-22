@@ -83,7 +83,7 @@ header {
   background-color: blue;
   color: var(--white);
   cursor: pointer; 
-  border: 1px solid var(--white);
+  /* border: 1px solid var(--white); */
 }
 
 .btn-signin:hover {
@@ -106,12 +106,15 @@ header {
 /*carrito*/
 
 .cart-icon { 
-  font-weight: 300; /* espesor de donde se lo aplique*/
+  font-weight: 600; /* espesor de donde se lo aplique*/
   border-radius: 5px; /* borde redondo*/
   height: 40px; 
-  padding: 5px 10px; /* espacio arriba y abajo 1ero 5px, espacio izq y der 20px*/
+  padding: 10px 0px; /* espacio arriba y abajo 1ero 5px, espacio izq y der 20px*/
   cursor: pointer; 
+  font-size: 20px;
+  color: var(--white);
   /* background-color: var(--white); */ 
+  margin-right: 20px;
 } 
 
 .cart {
@@ -127,7 +130,9 @@ header {
   height: calc(100vh - 70px);
   overflow-y: scroll; /* agrega el scroll */
   z-index: 2;
-  display: none;
+  /* display: none; esto se va */ 
+  transform: translate(200%); /* corre el carro y lo saca de la pantalla, si uso la propiedad "translate: 200%" es lo mismo */ 
+  transition: all 0.5s ease-in-out; /* buscar cubic-bezier */
 } 
 
 .cart::-webkit-scrollbar { /*OCULTAR BARRA DE SCROLL DEL CARRITO*/
@@ -222,7 +227,9 @@ header {
 
 /*Toggle del carro*/
 #cart-toggle:checked + .cart {
-  display: flex;
+  /* display: flex; se va*/
+  transform: translate(0%);
+  transition: all 0.5s ease-in-out;
 }
 
 
@@ -301,7 +308,7 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
 .hero-card {/**/
   width: 300px;
   background: var(--azulboton);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -318,7 +325,7 @@ main {/*El main va a servir de contenedor principal de todas las secciones y ade
 }
 
 .hero-card img {
-  border-radius: 20px;
+  border-radius: 10px;
 } 
 
 .hero-card-info {
@@ -500,7 +507,7 @@ max-width: 1200px;
 .product img {
   width: 200px;
   height: 250px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .product {
@@ -510,7 +517,7 @@ max-width: 1200px;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 10px;
   gap: 10px;
   box-shadow: 0 0 5px var(--azulboton);
   transition: 0.4s ease; 
@@ -754,4 +761,5 @@ footer {/**/
     border: 2px solid var(--azulboton);
     background: var(--white);
   }
+
   
